@@ -41,7 +41,6 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
-SELECT CAST(strftime('%Y', c23) AS INTEGER) AS "YEAR", AVG(c21) AS "avg(c21)"
+SELECT strftime('%Y', c23), avg(c21)
 FROM tbl2
-GROUP BY CAST(strftime('%Y', c23) AS INTEGER)
-ORDER BY CAST(strftime('%Y', c23) AS INTEGER);
+GROUP BY strftime('%Y', c23)
